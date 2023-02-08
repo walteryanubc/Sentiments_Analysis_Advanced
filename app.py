@@ -1,5 +1,5 @@
 # load dependencies
-!pip install nltk
+pip install nltk
 
 import re
 import nltk
