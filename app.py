@@ -1,4 +1,6 @@
 # load dependencies
+!pip install nltk
+
 import re
 import nltk
 import pickle
