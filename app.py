@@ -13,13 +13,13 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # path of the model
-MODEL_PATH = r"model_LSTM.h5"
+MODEL_PATH = r"C:\Users\yancun.EAD\Documents\PhD\Sentiment Analysis with Python and Streamlit\combined\model_LSTM.h5"
 # maximize number of the allowed word in an input
 max_words = 500
 # shape of input data passed for prediction
-max_len = 3000
+max_len = 1000
 # path of tokenizer file
-tokenizer_file = r"tokenizer_LSTM.pkl"
+tokenizer_file = r"C:\Users\yancun.EAD\Documents\PhD\Sentiment Analysis with Python and Streamlit\combined\tokenizer_LSTM.pkl"
 
 # load tokenizer
 with open(tokenizer_file,'rb') as handle:
