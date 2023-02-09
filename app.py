@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 import pandas as pd
 import streamlit as st
+nltk.download('stopwords')
 
 from textblob import Word
 from keras import backend as K
