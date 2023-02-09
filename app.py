@@ -1,23 +1,21 @@
 # load dependencies
-import tensorflow
-from keras import backend as K
-from tensorflow.keras.models import Model, load_model
-import streamlit as st
+import re
 import nltk
+import pickle
+import numpy as np
+import pandas as pd
+import streamlit as st
+
 nltk.download("stopwords")
 nltk.download("punkt")
 nltk.download('wordnet')
 nltk.download('omw-1.4')
-from nltk.tokenize import word_tokenize
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-import pickle
-import re
-import string
+
 from textblob import Word
+from keras import backend as K
 from nltk.corpus import stopwords
-from nltk.stem.wordnet import WordNetLemmatizer
-import pandas as pd
-import numpy as np
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # path of the model
 MODEL_PATH = r"model_LSTM.h5"
