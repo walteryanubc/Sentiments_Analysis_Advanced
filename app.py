@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 nltk.download('stopwords')
-nltk.download('http://nltk.org/data.html')
+import stopwords
 
 from textblob import Word
 from keras import backend as K
