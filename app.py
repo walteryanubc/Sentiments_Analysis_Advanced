@@ -66,8 +66,10 @@ if __name__ == '__main__':
         i = text_cleaning(sentence)
         clean_text.append(i)
         sequences = tokenizer.texts_to_sequences(clean_text)
+        data = pad_sequences(sequences, maxlen=max_len)
+        
         # st.info(data)
-        prediction = model.predict(pad_sequences(sequences, maxlen=max_len)
+        prediction = model.predict(data)
         prediction_prob_negative = prediction[0][0]
         prediction_prob_neutral = prediction[0][1]
         prediction_prob_positive= prediction[0][2]
