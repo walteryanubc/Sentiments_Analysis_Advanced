@@ -2,7 +2,6 @@
 import re
 import pickle
 import nltk
-import corpora
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -17,7 +16,6 @@ print("corpora downloaded successfully")
 
 from textblob import Word
 from keras import backend as K
-from nltk.corpus import stopwords
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
