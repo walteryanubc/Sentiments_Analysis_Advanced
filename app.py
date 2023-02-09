@@ -29,10 +29,6 @@ tokenizer_file = r"tokenizer_LSTM.pkl"
 with open(tokenizer_file,'rb') as handle:
     tokenizer = pickle.load(handle)
 
-EMBEDDING_DIM = 32
-wordnet = WordNetLemmatizer()
-regex = re.compile('[%s]' % re.escape(string.punctuation))
-
 # apply text cleaning to input data
 def text_cleaning(line_from_column):
     text = line_from_column.lower()
