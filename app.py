@@ -18,7 +18,6 @@ from nltk.stem.wordnet import WordNetLemmatizer
 import pandas as pd
 import numpy as np
 
-EMBEDDING_DIM = 32
 wordnet = WordNetLemmatizer()
 regex = re.compile('[%s]' % re.escape(string.punctuation))
 
