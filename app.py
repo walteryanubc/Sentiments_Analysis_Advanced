@@ -1,4 +1,6 @@
 # load dependencies
+python -m textblob.download_corpora
+
 import re
 import pickle
 import nltk
