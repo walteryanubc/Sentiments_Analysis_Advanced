@@ -3,6 +3,7 @@
 import re
 import pickle
 import nltk
+import corpora
 import numpy as np
 import pandas as pd
 import streamlit as st
