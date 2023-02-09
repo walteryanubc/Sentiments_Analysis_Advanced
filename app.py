@@ -1,5 +1,4 @@
 # load dependencies
-
 import re
 import pickle
 import nltk
@@ -8,6 +7,11 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 nltk.download('stopwords')
+
+import subprocess
+cmd = ['python3', '-m', 'textblob.download_corpora']
+subprocess.run(cmd)
+print("corpora downloaded successfully")
 
 from textblob import Word
 from keras import backend as K
