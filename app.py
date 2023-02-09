@@ -24,7 +24,7 @@ MODEL_PATH = r"model_LSTM.h5"
 # maximize number of the allowed word in an input
 max_words = 500
 # shape of input data passed for prediction
-max_len = 1000
+max_len = 1100
 # path of tokenizer file
 tokenizer_file = r"tokenizer_LSTM.pkl"
 
@@ -66,13 +66,7 @@ if __name__ == '__main__':
         i = text_cleaning(sentence)
         clean_text.append(i)
         sequences = tokenizer.texts_to_sequences(clean_text)
-        data = pad_sequences(sequences,
-                            maxlen=1000,
-                            dtype='int32',
-                            padding='pre',
-                            truncating='pre',
-                            value=0
-                            )
+        data = pad_sequences(sequences, maxlen=max_len)
         # st.info(data)
         prediction = model.predict(data)
         prediction_prob_negative = prediction[0][0]
