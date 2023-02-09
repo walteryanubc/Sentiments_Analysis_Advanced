@@ -7,10 +7,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 nltk.download('stopwords')
-
-import requests
-url = "http://nltk.org/data.html"
-r = requests.get(url, allow_redirects=True)
+nltk.download('http://nltk.org/data.html')
 
 import textblob
 import subprocess
