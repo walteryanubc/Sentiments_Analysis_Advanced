@@ -27,11 +27,14 @@ max_words = 500
 max_len = 1000
 # path of tokenizer file
 tokenizer_file = r"tokenizer_LSTM.pkl"
-
 # load tokenizer
 with open(tokenizer_file,'rb') as handle:
     tokenizer = pickle.load(handle)
-    
+
+EMBEDDING_DIM = 32
+wordnet = WordNetLemmatizer()
+regex = re.compile('[%s]' % re.escape(string.punctuation))
+
 # apply text cleaning to input data
 def text_cleaning(line_from_column):
     text = line_from_column.lower()
