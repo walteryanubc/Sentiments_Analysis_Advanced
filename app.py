@@ -27,7 +27,7 @@ MODEL_PATH = r"model_LSTM.h5"
 # maximize number of the allowed word in an input
 max_words = 500
 # shape of input data passed for prediction
-max_len = 1000
+max_len = 3000
 # path of tokenizer file
 tokenizer_file = r"tokenizer_LSTM.pkl"
 
