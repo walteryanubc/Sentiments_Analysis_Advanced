@@ -9,6 +9,7 @@ nltk.download('stopwords')
 nltk.download('http://nltk.org/data.html')
 import stopwords
 
+from ntlk import stopwords
 from textblob import Word
 from keras import backend as K
 from tensorflow.keras.models import load_model
