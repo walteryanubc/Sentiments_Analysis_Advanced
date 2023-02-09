@@ -3,12 +3,10 @@
 import re
 import pickle
 import nltk
-import textblob
 import numpy as np
 import pandas as pd
 import streamlit as st
 nltk.download('stopwords')
-textblob.download_corpora
 
 from textblob import Word
 from keras import backend as K
