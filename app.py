@@ -1,18 +1,26 @@
 # load dependencies
-import re
-import pickle
-import nltk
-import numpy as np
-import pandas as pd
-import streamlit as st
-nltk.download('stopwords')
-nltk.download('http://nltk.org/data.html')
-
-from nltk import stopwords
-from textblob import Word
 from keras import backend as K
-from tensorflow.keras.models import load_model
+from tensorflow.keras.models import Model, load_model
+import streamlit as st
+import nltk
+nltk.download("stopwords")
+nltk.download("punkt")
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.tokenize import word_tokenize
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import pickle
+import re
+import string
+from textblob import Word
+from nltk.corpus import stopwords
+from nltk.stem.wordnet import WordNetLemmatizer
+import pandas as pd
+import numpy as np
+
+EMBEDDING_DIM = 32
+wordnet = WordNetLemmatizer()
+regex = re.compile('[%s]' % re.escape(string.punctuation))
 
 # path of the model
 MODEL_PATH = r"model_LSTM.h5"
@@ -67,6 +75,7 @@ if __name__ == '__main__':
         prediction_prob_negative = prediction[0][0]
         prediction_prob_neutral = prediction[0][1]
         prediction_prob_positive= prediction[0][2]
+        # prediction classes
         prediction_class = prediction.argmax(axis=-1)[0]
         print(prediction.argmax())
         st.header('Prediction using LSTM model')
