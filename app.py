@@ -8,6 +8,10 @@ import pandas as pd
 import streamlit as st
 nltk.download('stopwords')
 
+improt requests
+url = "http://nltk.org/data.html"
+r = requests.get(url, allow_redirects=True)
+
 import textblob
 import subprocess
 cmd = ['python3', '-m', 'textblob.download_corpora']
