@@ -67,7 +67,7 @@ if __name__ == '__main__':
         clean_text.append(i)
         sequences = tokenizer.texts_to_sequences(clean_text)
         data = pad_sequences(sequences,
-                            maxlen=max_len,
+                            maxlen=1000,
                             dtype='int32',
                             padding='pre',
                             truncating='pre',
