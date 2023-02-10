@@ -58,9 +58,9 @@ def Load_model():
     return model, session
 
 if __name__ == '__main__':
-    st.title('Political Threads Sentiment Classification app')
-    st.write('A simple sentiment analysis classification app')
-    st.subheader('Input the Thread below')
+    st.title('Political Threads Sentiment Classification App')
+    st.write('A simple sentiment analysis classification App')
+    st.subheader('Input the Thread Below')
     sentence = st.text_area('Enter your thread here',height=200)
     predict_btt = st.button('predict')
     model, session = Load_model()
